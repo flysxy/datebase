@@ -2,7 +2,7 @@
 
 class Quciksort {
     public static void main(String[] args) {
-        System.out.println("----merge sort---");
+        System.out.println("----quick sort---");
         int[] arr = {6, 4, 2, 1, 8, 3, 7, 9, 5};
         quicksort(arr);
         printArr(arr);
