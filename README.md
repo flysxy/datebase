@@ -1,1 +1,1 @@
-# emily's blogs
+# blogs
