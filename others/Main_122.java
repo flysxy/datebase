@@ -1,8 +1,5 @@
 
 public class Main_122 {
-    public static main(String[] args){
-
-    }
     public int maxProfit(int[] prices) {
         int res = 0;
         for (int i = 0; i< prices.length; i++) {

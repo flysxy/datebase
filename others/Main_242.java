@@ -14,7 +14,7 @@ public class Main_242 {
             counter[t.charAt(i) -'a']--;
         }
         for (int count:counter) {
-            if (count != 0) return false
+            if (count != 0) return false;
         }
         return true;
     }

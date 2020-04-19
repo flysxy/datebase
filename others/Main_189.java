@@ -13,7 +13,7 @@ public class Main_189 {
 
     }
     public static void reverse(int[] nums, int p, int q) {
-        while (start < end) {
+        while (p < q) {
             int tmp = nums[p];
             nums[p] = nums[q];
             nums[q] = tmp;

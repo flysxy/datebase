@@ -13,7 +13,7 @@ public class Main_350 {
         for (int i = 0; i < nums2.length; i++) {
             if (hasp.containsKey(nums2[i]) && hash.get(nums2[i]) > 0) {
                 list.add(nums2[i]);
-                hasp.put(nums2[i],  map.get(nums2[j]) - 1);
+                hasp.put(nums2[i],  hasp.get(nums2[i]) - 1);
             }
         }
         int count = list.size();

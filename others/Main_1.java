@@ -9,8 +9,7 @@ public class Main_1 {
         for (int i = 0; i < num.length; i++) {
             int tmp = target - num[i];
             if (hash.containsKey(tmp)) {
-                return new int[] {hash.get(tmp), i}
-
+                return new int[] {hash.get(tmp), i};
             }
             hash.put(num[i], i);
         }
