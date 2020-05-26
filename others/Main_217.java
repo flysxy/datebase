@@ -1,18 +1,11 @@
-import java.util.HashMap;
-
-public class Main_217 {
-    public static void main(String[] args) {
-
-    }
+// new
+class Solution {
     public boolean containsDuplicate(int[] nums) {
         if (nums.length == 0) return false;
-        HashMap<Integer> numsSet = new HashMap<>();
+        HashSet<Integer> set = new HashSet<>();
         for (int num : nums) {
-            if (numsSet.contains(num)) return true;
-            else numsSet.add(num);
+            if (!set.add(num)) return true;
         }
         return false;
-
     }
-
 }

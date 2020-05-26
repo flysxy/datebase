@@ -8,16 +8,17 @@
 
 // s = "loveleetcode",
 // 返回 2.
-public class Main_387 {
-    public int firstUniquChar(String s){
-        int[] letter = new int[26];
-        for(char c: s.toCharArray()) {
-            letter[c-'a']++;
+
+class Solution {
+    public int findUniqChar(String s) {
+        int[] num = new int[26];
+        for (char c : s.toCharArray()) {
+            num[c-'a']++;
         }
-        for (int i = 0; i <s.length(); i++) {
-            if (letter[s.charAt(i) - 'a'] == 1) return i;
+        for (int i = 0; i < s.length(); i++) {
+            if (num[s.charAt(i) - 'a'] == 1) return i;
         }
         return -1;
-    }
 
+    }
 }

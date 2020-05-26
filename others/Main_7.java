@@ -30,4 +30,19 @@ public class Main_7 {
 
     }
 
+class Solution {
+    public int reverse(int x) {
+        int ans = 0;
+        while (x != 0) {
+            int pos = x % 10;
+            if (ans > Integer.MAX_VALUE/ 10 || (ans == Integer.MAX_VALUE/10 && pos > 7))
+                return 0;
+            if (ans < Integer.MIN_VALUE/10 || (ans == Integer.MIX_VAlUE/10 && pos < -8))
+                return 0;
+            ans = ans*10 + pos;
+            x /= 10;
+        }
+        return ans;
+    }
 }
+

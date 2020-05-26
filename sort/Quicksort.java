@@ -51,3 +51,37 @@ class Quciksort {
 
 }
 
+// new thinking
+class Solution {
+    public void quickSort(int[] arr) {
+        if (arr == null) return;
+        quickSortInternal(arr, 0, arr.length-1);
+    }
+    public void quickSortInternal(int[] arr, int p, int r) {
+        if (p >= r) return;
+        int q = partition(arr, p, r);
+        quickSortInternal(arr, p, q-1);
+        quickSortInternal(arr, q+1, r);
+
+    }
+    public static int partition(int[] arr, int p, int r) {
+        int pivot = arr[r];
+        int i = p;
+        for (int j = p; j <= r; j++) {
+            if (arr[j] < pivot) {
+                if ( i == j) {
+                    i++;
+                } else {
+                    int tmp = arr[i];
+                    arr[i++] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+        }
+        tmp = arr[i];
+        arr[i] = arr[r];
+        arr[r] = tmp;
+        return i;
+    }
+}
+

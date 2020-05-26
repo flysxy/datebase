@@ -10,15 +10,13 @@
 
 // should be know indexOf() using in java
 // https://www.runoob.com/java/java-string-indexof.html
-
-public class Main_28 {
-    public int strStr(String heystack, String needle) {
-        int N = heystack.length();
+class Solution {
+    public int strStr(String haystack, String needle) {
+        int N = haystack.length();
         int L = needle.length();
         for (int i = 0; i < N-L+1; i++) {
-            if (heystack.substring(i, i+L).equals(needle)) {
+            if (haystack.substring(i, i+L).equals(needle))
                 return i;
-            }
         }
         return -1;
     }

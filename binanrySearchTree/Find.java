@@ -1,7 +1,7 @@
 class Find {
     private Node tree;
     public static void main(String[] args) {
-        System.out.println("binanry search tree: find"); 
+        System.out.println("binanry search tree: find");
     }
     public Node find(int value) {
         Node p = tree;
@@ -10,7 +10,7 @@ class Find {
             else if (value > p.date) p = p.right;
             else return p;
         }
-        return null;   
+        return null;
     }
     public static class Node {
         private int date;
